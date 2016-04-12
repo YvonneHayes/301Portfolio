@@ -17,4 +17,13 @@ var projectsData = [
     finishedOn: '2016-03-28',
     locationUrl: 'https://github.com/YvonneHayes/201Week3_BusMall',
   },
+  {
+  category: 'Final Project',
+  name:       'Trash Brigade',
+  summary:    '<p>A webpag for a local charity in Mexico. It has a image gallery that fades in and two forms that utilize local storage and verify the user input. </p>',
+  creator:      'Yvonne Hayes',
+  collaborators:   'Randy Gylling and Johnny Luangphasy',
+  finishedOn: '2016-04-07',
+  locationUrl: 'https://github.com/YvonneHayes/TrashBrigade',
+  },
 ];
