@@ -17,11 +17,11 @@ Project.prototype.toHtml = function() {
 
   $newProject.attr('data-category', this.category);
   $newProject.find('#forProject').text(this.name);
-  $newProject.find('.projectSummary').text(this.summary);
+  $newProject.find('.projectSummary').html(this.summary);
   $newProject.find('#creatorName').text(this.creator);
   $newProject.find('#others').text(this.collaborators);
   $newProject.find('pubdate').text(this.finishedOn);
-  $newProject.find('adress>href').text(this.locationUrl);
+  $newProject.find('#projectUrl').text(this.locationUrl);
 
   // Include the publication date as a 'title' attribute to show on hover:
   $newProject.find('time[pubdate]').attr('title', this.finishedOn)
@@ -46,5 +46,5 @@ projectsData.forEach(function(ele) {
 })
 
 projects.forEach(function(a){
-  $('#articles').append(a.toHtml())
+  $('#projects').append(a.toHtml())
 });
