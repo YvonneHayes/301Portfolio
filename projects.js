@@ -20,7 +20,7 @@ var projectsData = [
   {
   category: 'Final Project',
   name:       'Trash Brigade',
-  summary:    '<p>A webpag for a local charity in Mexico. It has a image gallery that fades in and two forms that utilize local storage and verify the user input. </p>',
+  summary:    '<p>A webpag for a local charity in Mexico. It has an image gallery that fades in and two forms that utilize local storage and verify the user input. </p>',
   creator:      'Yvonne Hayes',
   collaborators:   'Randy Gylling and Johnny Luangphasy',
   finishedOn: '2016-04-07',
