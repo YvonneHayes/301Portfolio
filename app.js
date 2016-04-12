@@ -37,14 +37,14 @@ Project.prototype.toHtml = function() {
 }
 
 
-// projectsData.sort(function(a,b) {
-//   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-// });
-//
-// projectsData.forEach(function(ele) {
-//   projects.push(new Project(ele));
-// })
-//
-// projects.forEach(function(a){
-//   $('#articles').append(a.toHtml())
-// });
+projectsData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
+projectsData.forEach(function(ele) {
+  projects.push(new Project(ele));
+})
+
+projects.forEach(function(a){
+  $('#articles').append(a.toHtml())
+});
