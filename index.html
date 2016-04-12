@@ -22,25 +22,27 @@
           </ul>
         </nav>
         <section id="projects">
-          <article class="template" data-category="">
+          <div class="template" data-category="CF course">
             <header>
               <h1 id="forProject">Title</h1>
               <div class="byline">
-                By <address><a href="">Author Name</a></address>
-                published <time pubdate datetime="2000-01-01">Publish Time</time>
+                Written by <p id="creatorName">Creator Name</p>
+                Collaborators: <p id="others">Collaborator Names</p>
+                published <time pubdate datetime="2000-01-01">Finished Date</time>
+                Project URL: <address><a href=""></a></address>
               </div>
             </header>
-            <section class="article-body"></section>
-          </article>
+            <section class="projectSummary"></section>
+          </div>
         </section>
       </div>
     </main>
     <footer>
-      &copy; 2016 Yvonne Hayes 
+      &copy; 2016 Yvonne Hayes
     </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="app.js"></script>
-
+    <script src="projects.js"></script>
   </body>
 </html>
