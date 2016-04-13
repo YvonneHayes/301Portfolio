@@ -30,7 +30,7 @@ Project.prototype.toHtml = function() {
   // Display the date as a relative number of "days ago":
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000) + ' days ago')
 
-  $newProject.append('<hr>');
+  // $newProject.append('<hr>');
 
   $newProject.removeClass('template');
 
@@ -77,7 +77,7 @@ projectView.handleCategoryFilter = function() {
       $('.newProject[data-category="' + categoryName +'"]').fadeIn('slow'); //fade in JUST the one category
 
     } else {
-      $('.template:not(.template)').fadeIn('fast'); //showing all projects but the template 
+      $('.template:not(.template)').fadeIn('fast'); //showing all projects but the template
 
     }
   });

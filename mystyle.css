@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
-.template {
-  visibility: hidden;
-  display: none;
+footer {
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
 }
+
+
 
 a:link {
   text-decoration: none;
@@ -19,4 +22,28 @@ body {
 
 #mainHeader {
   background-color: #FFE0CB;
+}
+
+.newProject {
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+}
+
+.main-nav {
+  display: block;
+}
+
+#category-filter {
+  display:block;
+  margin-bottom: 30px;
+}
+
+.template {
+  display: none;
+}
+
+#interests img {
+  width: 300px;
+  height: 300px;
 }

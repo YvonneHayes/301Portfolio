@@ -26,4 +26,13 @@ var projectsData = [
   finishedOn: '2016-04-07',
   locationUrl: 'https://github.com/YvonneHayes/TrashBrigade',
   },
+  {
+  category: 'Category: Final Project',
+  name:       'Super Awesome Project',
+  summary: "<p>Pommy ipsum punter pennyboy oo ecky thump a cracking odds and sods the dog's dinner, black cab a right toff eton mess flog a dead horse nuthouse. Bit of alright what a load of cobblers it's me peepers ask your mother if Dalek lost the plot, what a doddle therewith one would be honoured to any road, best be off a bottle of plonk tally-ho, spend a penny manky on a stag do in the jacksy. Oo ecky thump one would be honoured to chuffed knows bugger all about nowt grab a jumper Dalek rumpy pumpy middle class, numbskull golly you mean it ain't me noggin' ey up duck odds and sods. At the boozer Bad Wolf narky had a barney with the inlaws hadn't done it in donkey's years, porky-pies scouser by 'eck love. </p><p>Pommy ipsum punter pennyboy oo ecky thump a cracking odds and sods the dog's dinner, black cab a right toff eton mess flog a dead horse nuthouse. Bit of alright what a load of cobblers it's me peepers ask your mother if Dalek lost the plot, what a doddle therewith one would be honoured to any road, best be off a bottle of plonk tally-ho, spend a penny manky on a stag do in the jacksy. Oo ecky thump one would be honoured to chuffed knows bugger all about nowt grab a jumper Dalek rumpy pumpy middle class, numbskull golly you mean it ain't me noggin' ey up duck odds and sods. At the boozer Bad Wolf narky had a barney with the inlaws hadn't done it in donkey's years, porky-pies scouser by 'eck love. </p>",
+  creator:      'Yvonne Hayes',
+  collaborators:   'Some super dope peeps',
+  finishedOn: '2016-04-02',
+  locationUrl: 'https://github.com/YvonneHayes/SuperAwesome',
+  },
 ];
