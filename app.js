@@ -17,6 +17,7 @@ Project.prototype.toHtml = function() {
 
   $newProject.attr('data-category', this.category);
   $newProject.find('#forProject').text(this.name);
+  $newProject.find('#projectCategory').text(this.category);
   $newProject.find('.projectSummary').html(this.summary);
   $newProject.find('#creatorName').text(this.creator);
   $newProject.find('#others').text(this.collaborators);
@@ -47,4 +48,37 @@ projectsData.forEach(function(ele) {
 
 projects.forEach(function(a){
   $('#projects').append(a.toHtml())
+});
+
+//********************************************************//
+//        DAY TWO - FILTERS                               //
+//*******************************************************//
+
+var projectView = {};
+
+
+
+//********************************************************//
+//        DAY TWO - VIEW OPTIONS                          //
+//*******************************************************//
+
+// Event Handler that turns Home and About into Tabs
+projectView.handleMainNav = function() {
+  $('.main-nav').on('click', '.tab', function(){
+    var dataContent = $(this).attr('data-content');
+    $('.tab-content').hide();
+    $('#' + dataContent).show();
+  });
+
+  $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+};
+
+//Calling all functions as soon as ready
+$(document).ready(function(){
+  // articleView.populateFilters();
+  // articleView.handleAuthorFilter();
+  // articleView.handleCategoryFilter();
+  articleView.handleMainNav();
+  // articleView.setTeasers();
+
 });

@@ -24,11 +24,21 @@
             <li><a href="http://www.keepingyvonneweird.com" target ="_blank" <i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
           </ul>
         </nav>
-        <section id="projects">
+        <section id="projects" class="tab-content">
+          <div>
+            <ul id="filters">
+              <li>
+                <select id="category-filter">
+                  <option value="">-- Filter by Category --</option>
+                </select>
+              </li>
+            </ul>
+          </div>
           <div class="template" data-category="CF course">
             <header>
               <h1 id="forProject">Title</h1>
               <div class="byline">
+                <p id="projectCategory">Category</p>
                 Written by <p id="creatorName">Creator Name</p>
                 Collaborators: <p id="others">Collaborator Names</p>
                 published <time pubdate datetime="2000-01-01">Finished Date</time>

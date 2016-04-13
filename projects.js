@@ -1,6 +1,6 @@
 var projectsData = [
   {
-    category: '201 Project',
+    category: 'Category: 201 Project',
     name:       'Pizza 3000',
     summary:    '<p>A webpage for a Pizza restaurant that builds tables via JS and dynamically updates sales numbers for various locations</p>',
     creator:      'Yvonne Hayes',
@@ -9,7 +9,7 @@ var projectsData = [
     locationUrl: 'https://github.com/YvonneHayes/201Week2_Pizza',
   },
   {
-    category: '201 Project',
+    category: 'Category: 201 Project',
     name:       'BusMall',
     summary:    '<p>A webpag with a professional looking landing page and a cartoon/fun themed voting page, that counts clicks on a certain image and displays results in charts made with canvas and charts.js</p>',
     creator:      'Yvonne Hayes',
@@ -18,7 +18,7 @@ var projectsData = [
     locationUrl: 'https://github.com/YvonneHayes/201Week3_BusMall',
   },
   {
-  category: 'Final Project',
+  category: 'Category: Final Project',
   name:       'Trash Brigade',
   summary:    '<p>A webpag for a local charity in Mexico. It has an image gallery that fades in and two forms that utilize local storage and verify the user input. </p>',
   creator:      'Yvonne Hayes',
