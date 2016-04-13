@@ -56,6 +56,35 @@ projects.forEach(function(a){
 
 var projectView = {};
 
+//populate Filter with categories
+projectView.populateFilters = function() {
+  $('div').each(function() {
+    if (!$(this).hasClass('template')) {
+
+      var val = $(this).find('#projectCategory').text();
+      var optionTag = '<option value="' + val + '">' + val + '</option>';
+      $('#category-filter').append(optionTag);
+    }
+  });
+};
+
+//Show only projects of the selected category (or all if blank)
+projectView.handleCategoryFilter = function() {
+  $('#category-filter').on('change', function() {
+  var categoryName = $(this).val(); //Turned value of category into a variable
+    if (categoryName) {
+
+      $('#projectDiv').hide(); //hiding ALL articles
+      $('#projectDiv[data-category="' + categoryName +'"]').fadeIn('slow'); //fade in JUST the one category
+
+    } else {
+      $('#projectDiv:not(.template)').fadeIn('fast'); //showing all projects but the template +++++++
+
+    }
+    // $('#category-filter').val('');
+  });
+};
+
 
 
 //********************************************************//
@@ -75,10 +104,10 @@ projectView.handleMainNav = function() {
 
 //Calling all functions as soon as ready
 $(document).ready(function(){
-  // articleView.populateFilters();
-  // articleView.handleAuthorFilter();
+  projectView.populateFilters();
+  projectView.handleCategoryFilter();
   // articleView.handleCategoryFilter();
-  articleView.handleMainNav();
+  projectView.handleMainNav();
   // articleView.setTeasers();
 
 });
