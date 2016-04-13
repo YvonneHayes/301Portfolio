@@ -16,13 +16,13 @@ Project.prototype.toHtml = function() {
   var $newProject = $('div.template').clone();
 
   $newProject.attr('data-category', this.category);
-  $newProject.find('#forProject').text(this.name);
-  $newProject.find('#projectCategory').text(this.category);
+  $newProject.find('.forProject').text(this.name);
+  $newProject.find('.projectCategory').text(this.category);
   $newProject.find('.projectSummary').html(this.summary);
-  $newProject.find('#creatorName').text(this.creator);
-  $newProject.find('#others').text(this.collaborators);
+  $newProject.find('.creatorName').text(this.creator);
+  $newProject.find('.others').text(this.collaborators);
   $newProject.find('pubdate').text(this.finishedOn);
-  $newProject.find('#projectUrl').text(this.locationUrl);
+  $newProject.find('.projectUrl').text(this.locationUrl);
 
   // Include the publication date as a 'title' attribute to show on hover:
   $newProject.find('time[pubdate]').attr('title', this.finishedOn)
@@ -56,10 +56,13 @@ projects.forEach(function(a){
 
 //populate Filter with categories
 projectView.populateFilters = function() {
-  $('div').each(function() {
+  $('.newProject').each(function() {
+    console.log($(this));
     if (!$(this).hasClass('template')) {
 
-      var val = $(this).find('#projectCategory').text();
+      var val = $(this).find('.projectCategory').text();
+      console.log($(this).find('.projectCategory').text());
+
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#category-filter').append(optionTag);
     }
@@ -72,11 +75,11 @@ projectView.handleCategoryFilter = function() {
   var categoryName = $(this).val(); //Turned value of category into a variable
     if (categoryName) {
 
-      $('#projectDiv').hide(); //hiding ALL articles
-      $('#projectDiv[data-category="' + categoryName +'"]').fadeIn('slow'); //fade in JUST the one category
+      $('.newProject').hide(); //hiding ALL articles
+      $('.newProject[data-category="' + categoryName +'"]').fadeIn('slow'); //fade in JUST the one category
 
     } else {
-      $('#projectDiv:not(.template)').fadeIn('fast'); //showing all projects but the template +++++++
+      $('.template:not(.template)').fadeIn('fast'); //showing all projects but the template +++++++
 
     }
     // $('#category-filter').val('');
