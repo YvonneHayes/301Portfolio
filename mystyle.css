@@ -8,3 +8,7 @@
   visibility: hidden;
   display: none;
 }
+
+a:link {
+  text-decoration: none;
+}
