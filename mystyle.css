@@ -8,3 +8,15 @@
   visibility: hidden;
   display: none;
 }
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  background-color: #BCD1CE;
+}
+
+#mainHeader {
+  background-color: #FFE0CB;
+}
