@@ -1,4 +1,4 @@
-
+var projectView = {};
 var projects = [];
 
 //Project creator function
@@ -51,10 +51,8 @@ projects.forEach(function(a){
 });
 
 //********************************************************//
-//        DAY TWO - FILTERS                               //
+//                    FILTERS                             //
 //*******************************************************//
-
-var projectView = {};
 
 //populate Filter with categories
 projectView.populateFilters = function() {
@@ -88,7 +86,7 @@ projectView.handleCategoryFilter = function() {
 
 
 //********************************************************//
-//        DAY TWO - VIEW OPTIONS                          //
+//                  VIEW OPTIONS                          //
 //*******************************************************//
 
 // Event Handler that turns Home and About into Tabs
@@ -99,19 +97,12 @@ projectView.handleMainNav = function() {
     $('#' + dataContent).show();
   });
 
-  $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+  $('.main-nav .tab:first').click();
 };
 
 //Set the teasers and read more link
 projectView.setTeasers = function() {
   $('.projectSummary *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
-
-  // DONE: Add an event handler to reveal all the hidden elements,
-  //       when the .read-on link is clicked. You can go ahead and hide the
-  //       "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
-  //       Ideally, we'd attach this as just 1 event handler on the #articles section, and let it
-  //       process any .read-on clicks that happen within child nodes.
-
   $('.read-on').on('click', function(e){
     e.preventDefault();
     $(this).siblings('.projectSummary').find('*:nth-of-type(n+2)').show();
