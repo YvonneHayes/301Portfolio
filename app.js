@@ -57,11 +57,9 @@ projects.forEach(function(a){
 //populate Filter with categories
 projectView.populateFilters = function() {
   $('.newProject').each(function() {
-    console.log($(this));
     if (!$(this).hasClass('template')) {
 
       var val = $(this).find('.projectCategory').text();
-      console.log($(this).find('.projectCategory').text());
 
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#category-filter').append(optionTag);
@@ -79,10 +77,9 @@ projectView.handleCategoryFilter = function() {
       $('.newProject[data-category="' + categoryName +'"]').fadeIn('slow'); //fade in JUST the one category
 
     } else {
-      $('.template:not(.template)').fadeIn('fast'); //showing all projects but the template +++++++
+      $('.template:not(.template)').fadeIn('fast'); //showing all projects but the template 
 
     }
-    // $('#category-filter').val('');
   });
 };
 
