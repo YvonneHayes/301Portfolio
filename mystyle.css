@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width:100%;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #777;
+}
+
+a:hover, a:focus {
+  color: green;
+}
+
+a:visited {
+}
+
 footer {
   width: 100%;
   margin-bottom: 0;
@@ -25,9 +41,8 @@ body {
 }
 
 .newProject {
-  width: 400px;
-  height: 400px;
-  display: inline-block;
+  width: 40%;
+  margin-left: 10%;
 }
 
 .main-nav {
@@ -50,4 +65,77 @@ body {
 
 #interests li {
   display: inline-block;
+}
+
+#hamburger{
+  float: right;
+  font-size: 30px;
+  color: blue;
+}
+
+.main-nav {
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+#filters {
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.flex-container {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  #hamburger {
+    display:none;
+  }
+
+  .main-nav ul {
+    display:block;
+  }
+
+  .main-nav ul li {
+    display:inline;
+    padding: 0 20px 0 20px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) { /* Small screens text turns into one column */
+
+  .flex-container {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .newProject {
+    width: 100%;
+  }
+
+
+
 }

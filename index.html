@@ -10,14 +10,16 @@
   </head>
   <body>
     <main>
-        <header id="mainHeader">
+        <header id="mainHeader clearfix">
+          <section class="heading-group1">
           <h1>
             Yvonne Hayes | Developer
           </h1>
           <p>Find out what I can do!</p>
+        </section>
         </header>
         <nav class="main-nav">
-          <a href ="#" class="icon-menu"></a>
+          <a href ="#" <i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
           <ul>
             <li class="tab" data-content="projects"><a class='icon-home' href="#"<i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
             <li class="tab" data-content="about"><a class='icon-address-book'href="#"> About</a></li>
@@ -35,7 +37,8 @@
             </ul>
           </div>
         </nav>
-        <section id="projects" class="tab-content">
+        <!-- <div class="flex-container"> -->
+        <section id="projects" class="tab-content flex-container">
           <div class="template newProject" data-category="CF course">
             <header>
               <h1 class="forProject">Title</h1>
@@ -51,6 +54,7 @@
             <a href="#" class="read-on">Read more &rarr;</a>
           </div>
         </section>
+      <!-- </div> -->
         <section id="about" class="tab-content">
           <header>
             Welcome to my Blog

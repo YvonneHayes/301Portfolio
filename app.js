@@ -22,7 +22,7 @@ Project.prototype.toHtml = function() {
   $newProject.find('.creatorName').text(this.creator);
   $newProject.find('.others').text(this.collaborators);
   $newProject.find('pubdate').text(this.finishedOn);
-  $newProject.find('.projectUrl').text(this.locationUrl);
+  $newProject.find('.projectUrl').html(this.locationUrl);
 
   // Include the publication date as a 'title' attribute to show on hover:
   $newProject.find('time[pubdate]').attr('title', this.finishedOn)
