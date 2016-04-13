@@ -47,3 +47,7 @@ body {
   width: 300px;
   height: 300px;
 }
+
+#interests li {
+  display: inline-block;
+}
