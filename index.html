@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <script id="project-template" type="text/x-handlebars-template">
-      <div data-category="{{category}}">
+      <div data-category="{{category}}" class="newProject">
         <header>
           <h1>{{name}}</h1>
           <div class="byline">
@@ -20,6 +20,11 @@
             <p class="{{location}}">Project URL:<a href=""></a></p>
           </div>
         </header>
+      </div>
+    </script>
+    <script id="selector-template" type="text/x-handlerbars-template">
+      <option value="{{data}}">{{data}}</option>
+    </script>
         <section class="projectSummary">{{{summary}}}</section>
         <a href="#" class="read-on">Read more &rarr;</a>
       </div>

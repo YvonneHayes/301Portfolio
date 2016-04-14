@@ -46,15 +46,25 @@ projects.forEach(function(a){
 //populate Filter with categories
 projectView.populateFilters = function() {
   $('.newProject').each(function() {
-    if (!$(this).hasClass('template')) {
+    var appTemplate = $('#selector-template').html();
+    var compileTemplate = Handlebars.compile(appTemplate);
+    var val = {
+      data: $(this).attr('data-category')
+    };
+    var optionTag = compileTemplate(val);
+    $('#category-filter').append(optionTag);
 
-      var val = $(this).find('.projectCategory').text();
-
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
+    val = {
+      data: $(this).attr('data-category')
+    };
+    optionTag = compileTemplate(val);
+    console.log(optionTag);
+    if ($('#category-filter option[value="' + val.data + '"]').length === 0) {
       $('#category-filter').append(optionTag);
     }
   });
 };
+
 
 //Show only projects of the selected category (or all if blank)
 projectView.handleCategoryFilter = function() {
