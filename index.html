@@ -7,6 +7,24 @@
     <!-- <link rel="stylesheet" href="vendor/styles/normalize.css"> -->
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <script id="project-template" type="text/x-handlebars-template">
+      <div data-category="{{category}}">
+        <header>
+          <h1>{{name}}</h1>
+          <div class="byline">
+            <p class="projectCategory">{{category}}</p>
+            Written by <p class="creatorName">{{creator}}</p>
+            Collaborators: <p class="others">{{collaborators}}</p>
+            published <time pubdate datetime="{{finishedOn}}">{{finishedOn}}</time>
+            <p class="{{location}}">Project URL:<a href=""></a></p>
+          </div>
+        </header>
+        <section class="projectSummary">{{{summary}}}</section>
+        <a href="#" class="read-on">Read more &rarr;</a>
+      </div>
+    </script>
+
   </head>
   <body>
     <main>
@@ -38,20 +56,6 @@
           </div>
         </nav>
         <section id="projects" class="tab-content flex-container">
-          <div class="template newProject" data-category="CF course">
-            <header>
-              <h1 class="forProject">Title</h1>
-              <div class="byline">
-                <p class="projectCategory">Category</p>
-                Written by <p class="creatorName">Creator Name</p>
-                Collaborators: <p class="others">Collaborator Names</p>
-                published <time pubdate datetime="2000-01-01">Finished Date</time>
-                <p class="projectUrl">Project URL:<a href=""></a></p>
-              </div>
-            </header>
-            <section class="projectSummary"></section>
-            <a href="#" class="read-on">Read more &rarr;</a>
-          </div>
         </section>
       <!-- </div> -->
         <section id="about" class="tab-content">
