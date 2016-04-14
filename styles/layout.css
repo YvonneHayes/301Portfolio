@@ -1,40 +1,14 @@
 /**********************************************************/
-/*                       GENERAL                         */
-/*********************************************************/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #BCD1CE;
-}
-
-
-/**********************************************************/
 /*                       HEADER                          */
 /*********************************************************/
 
 #mainHeader {
-  background-image: url("img/purple2.jpg");
   height: 400px;
 }
-
 
 /**********************************************************/
 /*                       NAVBAR                          */
 /*********************************************************/
-
-a, a:link, a:active {
-  text-decoration: none;
-  color: #777;
-}
-
-a:hover, a:focus {
-  color: green;
-}
 
 a:visited {
 }
@@ -51,7 +25,6 @@ a:visited {
 #hamburger{
   float: right;
   font-size: 30px;
-  color: blue;
 }
 
 .main-nav {
@@ -81,9 +54,6 @@ a:visited {
   list-style: none;
 }
 
-
-
-
 /**********************************************************/
 /*                       FOOTER                          */
 /*********************************************************/
@@ -110,39 +80,6 @@ footer {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-/**********************************************************/
-/*                       RWD                             */
-/*********************************************************/
-@media only screen and (min-width: 1024px) {
-
-  #hamburger {
-    display:none;
-  }
-
-  .main-nav ul {
-    display:block;
-  }
-
-  .main-nav ul li {
-    display:inline;
-    padding: 0 20px 0 20px;
-  }
-
-}
-
-@media only screen and (max-width: 1024px) { /* Small screens text turns into one column */
-
-  .flex-container {
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  .newProject {
-    width: 100%;
-  }
-
 }
 
 /**********************************************************/
