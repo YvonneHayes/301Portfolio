@@ -17,17 +17,16 @@
             Written by <p class="creatorName">{{creator}}</p>
             Collaborators: <p class="others">{{collaborators}}</p>
             published <time pubdate datetime="{{finishedOn}}">{{finishedOn}}</time>
-            <p class="{{location}}">Project URL:<a href=""></a></p>
+            <p class="{{locationUrl}}">{{{locationUrl}}}<a href=""></a></p>
           </div>
         </header>
-      </div>
-    </script>
-    <script id="selector-template" type="text/x-handlerbars-template">
-      <option value="{{data}}">{{data}}</option>
-    </script>
         <section class="projectSummary">{{{summary}}}</section>
         <a href="#" class="read-on">Read more &rarr;</a>
       </div>
+    </script>
+
+    <script id="selector-template" type="text/x-handlerbars-template">
+      <option value="{{data}}">{{data}}</option>
     </script>
 
   </head>
@@ -50,16 +49,13 @@
             <li><a href="https://github.com/YvonneHayes" target="_blank"<i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
             <li><a href="http://www.keepingyvonneweird.com" target ="_blank" <i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
           </ul>
-          <div>
-            <ul id="filters">
-              <li>
-                <select id="category-filter">
-                  <option value="">-- Filter by Category --</option>
-                </select>
-              </li>
-            </ul>
-          </div>
         </nav>
+
+          <p id="filters">
+              <select id="category-filter">
+                <option value="">-- Filter by Category --</option>
+              </select>
+          </p>
         <section id="projects" class="tab-content flex-container">
         </section>
       <!-- </div> -->
