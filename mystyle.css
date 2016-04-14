@@ -1,12 +1,31 @@
+/**********************************************************/
+/*                       GENERAL                         */
+/*********************************************************/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-img {
-  max-width:100%;
+body {
+  background-color: #BCD1CE;
 }
+
+
+/**********************************************************/
+/*                       HEADER                          */
+/*********************************************************/
+
+#mainHeader {
+  background-image: url("img/purple2.jpg");
+  height: 400px;
+}
+
+
+/**********************************************************/
+/*                       NAVBAR                          */
+/*********************************************************/
 
 a, a:link, a:active {
   text-decoration: none;
@@ -20,31 +39,6 @@ a:hover, a:focus {
 a:visited {
 }
 
-footer {
-  width: 100%;
-  margin-bottom: 0;
-  display: inline-block;
-}
-
-
-
-a:link {
-  text-decoration: none;
-}
-
-body {
-  background-color: #BCD1CE;
-}
-
-#mainHeader {
-  background-color: #FFE0CB;
-}
-
-.newProject {
-  width: 40%;
-  margin-left: 10%;
-}
-
 .main-nav {
   display: block;
 }
@@ -52,19 +46,6 @@ body {
 #category-filter {
   display:block;
   margin-bottom: 30px;
-}
-
-.template {
-  display: none;
-}
-
-#interests img {
-  width: 300px;
-  height: 300px;
-}
-
-#interests li {
-  display: inline-block;
 }
 
 #hamburger{
@@ -102,12 +83,38 @@ body {
 
 
 
+
+/**********************************************************/
+/*                       FOOTER                          */
+/*********************************************************/
+
+footer {
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+/**********************************************************/
+/*                      PROJECTS                         */
+/*********************************************************/
+.newProject {
+  width: 40%;
+  margin-left: 10%;
+}
+
+.template {
+  display: none;
+}
+
 .flex-container {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+/**********************************************************/
+/*                       RWD                             */
+/*********************************************************/
 @media only screen and (min-width: 1024px) {
 
   #hamburger {
@@ -136,6 +143,22 @@ body {
     width: 100%;
   }
 
+}
+
+/**********************************************************/
+/*                       ABOUT                           */
+/*********************************************************/
 
 
+img {
+  max-width:100%;
+}
+
+#interests img {
+  width: 300px;
+  height: 300px;
+}
+
+#interests li {
+  display: inline-block;
 }

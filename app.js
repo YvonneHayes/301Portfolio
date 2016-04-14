@@ -3,13 +3,13 @@ var projects = [];
 
 //Project creator function
 function Project (projectIndex) {
-    this.category = projectIndex.category;
-    this.name = projectIndex.name;
-    this.summary = projectIndex.summary;
-    this.creator = projectIndex.creator;
-    this.collaborators = projectIndex.collaborators;
-    this.finishedOn = projectIndex.finishedOn;
-    this.locationUrl = projectIndex.locationUrl
+  this.category = projectIndex.category;
+  this.name = projectIndex.name;
+  this.summary = projectIndex.summary;
+  this.creator = projectIndex.creator;
+  this.collaborators = projectIndex.collaborators;
+  this.finishedOn = projectIndex.finishedOn;
+  this.locationUrl = projectIndex.locationUrl;
 }
 
 Project.prototype.toHtml = function() {
@@ -25,17 +25,17 @@ Project.prototype.toHtml = function() {
   $newProject.find('.projectUrl').html(this.locationUrl);
 
   // Include the publication date as a 'title' attribute to show on hover:
-  $newProject.find('time[pubdate]').attr('title', this.finishedOn)
+  $newProject.find('time[pubdate]').attr('title', this.finishedOn);
 
   // Display the date as a relative number of "days ago":
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000) + ' days ago')
+  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000) + ' days ago');
 
   // $newProject.append('<hr>');
 
   $newProject.removeClass('template');
 
   return $newProject;
-}
+};
 
 
 projectsData.sort(function(a,b) {
@@ -44,10 +44,10 @@ projectsData.sort(function(a,b) {
 
 projectsData.forEach(function(ele) {
   projects.push(new Project(ele));
-})
+});
 
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml())
+  $('#projects').append(a.toHtml());
 });
 
 //********************************************************//
@@ -70,7 +70,7 @@ projectView.populateFilters = function() {
 //Show only projects of the selected category (or all if blank)
 projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
-  var categoryName = $(this).val(); //Turned value of category into a variable
+    var categoryName = $(this).val(); //Turned value of category into a variable
     if (categoryName) {
 
       $('.newProject').hide(); //hiding ALL articles
@@ -106,7 +106,7 @@ projectView.setTeasers = function() {
   $('.read-on').on('click', function(e){
     e.preventDefault();
     $(this).siblings('.projectSummary').find('*:nth-of-type(n+2)').show();
-  })
+  });
 
 };
 

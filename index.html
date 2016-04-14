@@ -10,7 +10,7 @@
   </head>
   <body>
     <main>
-        <header id="mainHeader clearfix">
+        <header id="mainHeader">
           <section class="heading-group1">
           <h1>
             Yvonne Hayes | Developer
@@ -21,8 +21,8 @@
         <nav class="main-nav">
           <a href ="#" <i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
           <ul>
-            <li class="tab" data-content="projects"><a class='icon-home' href="#"<i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li class="tab" data-content="about"><a class='icon-address-book'href="#"> About</a></li>
+            <li class="tab" data-content="projects"><a href="#" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li class="tab" data-content="about"><a href="#" <i class="fa fa-female" aria-hidden="true"></i> About</a></li>
             <li><a href="https://twitter.com/KeepingYWeird" target="_blank" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
             <li><a href="https://github.com/YvonneHayes" target="_blank"<i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
             <li><a href="http://www.keepingyvonneweird.com" target ="_blank" <i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
@@ -37,7 +37,6 @@
             </ul>
           </div>
         </nav>
-        <!-- <div class="flex-container"> -->
         <section id="projects" class="tab-content flex-container">
           <div class="template newProject" data-category="CF course">
             <header>
@@ -75,6 +74,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="projects.js"></script>
     <script src="app.js"></script>
   </body>
