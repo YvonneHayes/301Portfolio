@@ -13,33 +13,22 @@ function Project (projectIndex) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('div.template').clone();
 
-  $newProject.attr('data-category', this.category);
-  $newProject.find('.forProject').text(this.name);
-  $newProject.find('.projectCategory').text(this.category);
-  $newProject.find('.projectSummary').html(this.summary);
-  $newProject.find('.creatorName').text(this.creator);
-  $newProject.find('.others').text(this.collaborators);
-  $newProject.find('pubdate').text(this.finishedOn);
-  $newProject.find('.projectUrl').html(this.locationUrl);
+  var appTemplate = $('#project-template').html();
+  var compileTemplate = Handlebars.compile(appTemplate);
 
-  // Include the publication date as a 'title' attribute to show on hover:
-  $newProject.find('time[pubdate]').attr('title', this.finishedOn);
+  this.daysAgo = parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000);
+  this.publishStatus = this.finishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
-  // Display the date as a relative number of "days ago":
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000) + ' days ago');
+  var html = compileTemplate(this);
+  return html;
 
-  // $newProject.append('<hr>');
-
-  $newProject.removeClass('template');
-
-  return $newProject;
 };
 
 
+
 projectsData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  return (new Date(b.finishedOn)) - (new Date(a.finishedOn));
 });
 
 projectsData.forEach(function(ele) {
