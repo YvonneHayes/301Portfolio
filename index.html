@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Yvonne Hayes</title>
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="vendor/styles/normalize.css"> -->
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   </head>
   <body>
     <main>
-        <header id="mainHeader">
+        <header id="mainHeader clearfix">
+          <section class="heading-group1">
           <h1>
             Yvonne Hayes | Developer
           </h1>
           <p>Find out what I can do!</p>
+        </section>
         </header>
         <nav class="main-nav">
+          <a href ="#" <i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
           <ul>
             <li class="tab" data-content="projects"><a class='icon-home' href="#"<i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
             <li class="tab" data-content="about"><a class='icon-address-book'href="#"> About</a></li>
@@ -23,8 +27,6 @@
             <li><a href="https://github.com/YvonneHayes" target="_blank"<i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
             <li><a href="http://www.keepingyvonneweird.com" target ="_blank" <i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
           </ul>
-        </nav>
-        <section id="projects" class="tab-content">
           <div>
             <ul id="filters">
               <li>
@@ -34,6 +36,9 @@
               </li>
             </ul>
           </div>
+        </nav>
+        <!-- <div class="flex-container"> -->
+        <section id="projects" class="tab-content flex-container">
           <div class="template newProject" data-category="CF course">
             <header>
               <h1 class="forProject">Title</h1>
@@ -49,16 +54,17 @@
             <a href="#" class="read-on">Read more &rarr;</a>
           </div>
         </section>
+      <!-- </div> -->
         <section id="about" class="tab-content">
           <header>
             Welcome to my Blog
           </header>
           <section>
-            <h1>Some of my intrests:</h1>
-            <ul>
-              <li>Coding</li>
-              <li>Gaming</li>
-              <li>Reading</li>
+            <h1>Some of my interests:</h1>
+            <ul id="interests">
+              <li><img src="img/puppy1.jpg" alt="Mountain View">Coding</li>
+              <li><img src="img/puppy2.jpeg" alt="Mountain View">Gaming</li>
+              <li><img src="img/puppy3.jpeg" alt="Mountain View">Reading</li>
             </ul>
           </section>
         </section>
