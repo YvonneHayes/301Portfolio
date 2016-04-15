@@ -1,0 +1,32 @@
+/**********************************************************/
+/*                       RWD                             */
+/*********************************************************/
+@media only screen and (min-width: 1024px) {
+
+  #hamburger {
+    display:none;
+  }
+
+  .main-nav ul {
+    display:block;
+  }
+
+  .main-nav ul li {
+    display:inline;
+    padding: 0 20px 0 20px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) { /* Small screens text turns into one column */
+
+  .flex-container {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .newProject {
+    width: 100%;
+  }
+
+}

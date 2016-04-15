@@ -1,0 +1,111 @@
+/**********************************************************/
+/*                       HEADER                          */
+/*********************************************************/
+
+
+#mainHeader {
+  height: 350px;
+}
+
+#mainH1 {
+  text-align: center;
+}
+
+#mainH2 {
+  text-align: center;
+}
+
+
+/**********************************************************/
+/*                       NAVBAR                          */
+/*********************************************************/
+
+a:visited {
+}
+
+.main-nav {
+  display: block;
+}
+
+#category-filter {
+  display:block;
+  margin-bottom: 30px;
+}
+
+#hamburger{
+  float: right;
+  font-size: 30px;
+}
+
+.main-nav {
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+#filters {
+  padding: 0;
+  list-style: none;
+}
+
+/**********************************************************/
+/*                       FOOTER                          */
+/*********************************************************/
+
+footer {
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+/**********************************************************/
+/*                      PROJECTS                         */
+/*********************************************************/
+.newProject {
+  width: 40%;
+  margin-left: 10%;
+}
+
+.template {
+  display: none;
+}
+
+.flex-container {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/**********************************************************/
+/*                       ABOUT                           */
+/*********************************************************/
+
+
+img {
+  max-width:100%;
+}
+
+#interests img {
+  width: 300px;
+  height: 300px;
+}
+
+#interests li {
+  display: inline-block;
+}

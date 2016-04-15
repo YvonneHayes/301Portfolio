@@ -4,55 +4,64 @@
     <meta charset="UTF-8">
     <title>Yvonne Hayes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="vendor/styles/normalize.css"> -->
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/state.css">
+    <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+    <script id="project-template" type="text/x-handlebars-template">
+      <div data-category="{{category}}" class="newProject">
+        <header>
+          <h3>{{name}}</h3>
+          <div class="byline">
+            <p class="projectCategory">{{category}}</p>
+            Written by <p class="creatorName">{{creator}}</p>
+            Collaborators: <p class="others">{{collaborators}}</p>
+            published <time pubdate datetime="{{finishedOn}}">{{finishedOn}}</time>
+            <p class="{{locationUrl}}">{{{locationUrl}}}<a href=""></a></p>
+          </div>
+        </header>
+        <section class="projectSummary">{{{summary}}}</section>
+        <a href="#" class="read-on">Read more &rarr;</a>
+      </div>
+    </script>
+
+    <script id="selector-template" type="text/x-handlerbars-template">
+      <option value="{{data}}">{{data}}</option>
+    </script>
+
   </head>
   <body>
     <main>
-        <header id="mainHeader clearfix">
+        <header id="mainHeader">
           <section class="heading-group1">
-          <h1>
+          <h1 id="mainH1">
             Yvonne Hayes | Developer
           </h1>
-          <p>Find out what I can do!</p>
+          <h2 id="mainH2">"Cool quote that makes me look super smart"</h2>
         </section>
         </header>
         <nav class="main-nav">
           <a href ="#" <i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
           <ul>
-            <li class="tab" data-content="projects"><a class='icon-home' href="#"<i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li class="tab" data-content="about"><a class='icon-address-book'href="#"> About</a></li>
+            <li class="tab" data-content="projects"><a href="#" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li class="tab" data-content="about"><a href="#" <i class="fa fa-hand-peace-o" aria-hidden="true"></i></i></i> About</a></li>
             <li><a href="https://twitter.com/KeepingYWeird" target="_blank" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
             <li><a href="https://github.com/YvonneHayes" target="_blank"<i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
             <li><a href="http://www.keepingyvonneweird.com" target ="_blank" <i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
           </ul>
-          <div>
-            <ul id="filters">
-              <li>
-                <select id="category-filter">
-                  <option value="">-- Filter by Category --</option>
-                </select>
-              </li>
-            </ul>
-          </div>
         </nav>
-        <!-- <div class="flex-container"> -->
+
+          <p id="filters">
+              <select id="category-filter">
+                <option value="">-- Filter by Category --</option>
+              </select>
+          </p>
         <section id="projects" class="tab-content flex-container">
-          <div class="template newProject" data-category="CF course">
-            <header>
-              <h1 class="forProject">Title</h1>
-              <div class="byline">
-                <p class="projectCategory">Category</p>
-                Written by <p class="creatorName">Creator Name</p>
-                Collaborators: <p class="others">Collaborator Names</p>
-                published <time pubdate datetime="2000-01-01">Finished Date</time>
-                <p class="projectUrl">Project URL:<a href=""></a></p>
-              </div>
-            </header>
-            <section class="projectSummary"></section>
-            <a href="#" class="read-on">Read more &rarr;</a>
-          </div>
         </section>
       <!-- </div> -->
         <section id="about" class="tab-content">
@@ -75,6 +84,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="projects.js"></script>
     <script src="app.js"></script>
   </body>
