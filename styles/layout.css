@@ -2,9 +2,19 @@
 /*                       HEADER                          */
 /*********************************************************/
 
+
 #mainHeader {
-  height: 400px;
+  height: 350px;
 }
+
+#mainH1 {
+  text-align: center;
+}
+
+#mainH2 {
+  text-align: center;
+}
+
 
 /**********************************************************/
 /*                       NAVBAR                          */

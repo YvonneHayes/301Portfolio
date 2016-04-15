@@ -3,7 +3,7 @@
 /*********************************************************/
 
 body {
-  background-color: #BCD1CE;
+  background-color: #FAFAFA;
 }
 
 /**********************************************************/
@@ -11,7 +11,26 @@ body {
 /*********************************************************/
 
 #mainHeader {
-  background-image: url("../img/purple2.jpg");
+  background-image: url("../img/lavender5.png");
+  background-position: center;
+}
+
+#mainH1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 4rem;
+}
+
+#mainH2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+}
+
+h3, p {
+  font-family: 'EB Garamond', serif;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 
