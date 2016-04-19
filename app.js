@@ -140,11 +140,20 @@ projectView.setTeasers = function() {
 // };
 
 Project.fetchAll = function() {
-  var getJSONObj = $.getJSON('/Data/projects.json', function(data) {
+  console.log("Hello");
+  $.getJSON('Data/projects.json', function() {
+    console.log("Hi there!");
+
+  }).done(function(data){
     Project.loadAll(data);
     Project.renderProjects();
+  }).error(function(data){
+    console.log(data);
   });
 };
+
+
+
 
 //Calling all functions as soon as ready
 $(document).ready(function(){
