@@ -1,5 +1,4 @@
 var projectView = {};
-var projects = [];
 
 //Project creator function
 function Project (projectIndex) {
@@ -12,47 +11,49 @@ function Project (projectIndex) {
   this.locationUrl = projectIndex.locationUrl;
 }
 
+//making the Template
+
+Project.all = []; //empty array to be filled with projects
+
 Project.prototype.toHtml = function() {
-
-  var appTemplate = $('#project-template').html();
-  var compileTemplate = Handlebars.compile(appTemplate);
-
+  //store number of days since finshedOn
   this.daysAgo = parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000);
-  this.publishStatus = this.finishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
-  var html = compileTemplate(this);
-  return html;
-
+  var apptemplate = $('#project-template').html();
+  var templateFunction = Handlebars.compile(apptemplate)
+  return templateFunction(this);
 };
 
+//instatiating the projects
 
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    var diff =  (new Date(b.finishedOn)) - (new Date(a.finishedOn));
+    return diff;
+  });
 
-projectsData.sort(function(a,b) {
-  return (new Date(b.finishedOn)) - (new Date(a.finishedOn));
-});
+//Going through data and creating new Project object for each object in data
+  rawData.forEach(function(item) {
+    Project.all.push(new Project(item));
+  });
+};
 
-projectsData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
-
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+//function that calls .toHtml method on each project and appends them to #projects
+Project.renderProjects = function(){
+  return Project.all.forEach(function(x){
+    $('#projects').append(x.toHtml());
+  });
+};
 
 //********************************************************//
 //                    FILTERS                             //
 //*******************************************************//
 
-//populate Filter with categories
+// populate Filter with categories
 projectView.populateFilters = function() {
-  var appTemplate = $('#selector-template').html();
-  var compileTemplate = Handlebars.compile(appTemplate);
+  var apptemplate = $('#selector-template').html();
+  var compileTemplate = Handlebars.compile(apptemplate);
   $('.newProject').each(function() {
-    // var val = {
-    //   data: $(this).attr('data-category')
-    // };
-    // var optionTag = compileTemplate(val);
-    // $('#category-filter').append(optionTag);
 
     val = {
       data: $(this).attr('data-category')
@@ -107,6 +108,37 @@ projectView.setTeasers = function() {
   });
 
 };
+
+//********************************************************//
+//                  AJAX                                  //
+//*******************************************************//
+
+Project.fetchAll = function () {
+  var latestEtag = '';
+  var xhr = $.ajax({
+    url: '/Data/projects.json',
+    type: 'HEAD',
+    success: function(){
+      latestEtag = xhr.getResponseHeader('etag');
+      //if-else statement to make sure it isn't run before getResponseHeader request is DONE
+      if (localStorage.rawData && localStorage.etag == latestEtag){
+        Project.loadAll(JSON.parse(localStorage.rawData));
+        Project.renderProjects();
+
+      }else {
+        localStorage.etag = latestEtag;
+        $.getJSON('/Data/projects.json', function(data) {
+          //calling Project.LoadAll on data that we got from projects.json
+          Project.loadAll(data);
+          //storing stringifyed json data in local storage
+          localStorage.rawData = JSON.stringify(data);
+          Project.renderProjects();
+        });
+      }
+    }
+  });
+};
+
 
 //Calling all functions as soon as ready
 $(document).ready(function(){
