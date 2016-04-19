@@ -20,7 +20,7 @@ Project.prototype.toHtml = function() {
   this.daysAgo = parseInt((new Date() - new Date(this.finishedOn))/60/60/24/1000);
 
   var apptemplate = $('#project-template').html();
-  var templateFunction = Handlebars.compile(apptemplate)
+  var templateFunction = Handlebars.compile(apptemplate);
   return templateFunction(this);
 };
 
