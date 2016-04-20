@@ -113,46 +113,31 @@ projectView.setTeasers = function() {
 //                  AJAX                                  //
 //*******************************************************//
 
-// Project.fetchAll = function () {
-//   var latestEtag = '';
-//   var xhr = $.ajax({
-//     url: '/Data/projects.json',
-//     type: 'HEAD',
-//     success: function(){
-//       latestEtag = xhr.getResponseHeader('etag');
-//       //if-else statement to make sure it isn't run before getResponseHeader request is DONE
-//       if (localStorage.rawData && localStorage.etag == latestEtag){
-//         Project.loadAll(JSON.parse(localStorage.rawData));
-//         Project.renderProjects();
-//
-//       }else {
-//         localStorage.etag = latestEtag;
-//         $.getJSON('/Data/projects.json', function(data) {
-//           //calling Project.LoadAll on data that we got from projects.json
-//           Project.loadAll(data);
-//           //storing stringifyed json data in local storage
-//           localStorage.rawData = JSON.stringify(data);
-//           Project.renderProjects();
-//         });
-//       }
-//     }
-//   });
-// };
+Project.fetchAll = function () {
+  var latestEtag = '';
+  var xhr = $.ajax({
+    url: '/Data/projects.json',
+    type: 'HEAD',
+    success: function(){
+      latestEtag = xhr.getResponseHeader('etag');
+      //if-else statement to make sure it isn't run before getResponseHeader request is DONE
+      if (localStorage.rawData && localStorage.etag == latestEtag){
+        Project.loadAll(JSON.parse(localStorage.rawData));
+        Project.renderProjects();
 
-Project.fetchAll = function() {
-  console.log("Hello");
-  $.getJSON('Data/projects.json', function() {
-    console.log("Hi there!");
-
-  }).done(function(data){
-    Project.loadAll(data);
-    Project.renderProjects();
-  }).error(function(data){
-    console.log(data);
+      }else {
+        localStorage.etag = latestEtag;
+        $.getJSON('/Data/projects.json', function(data) {
+          //calling Project.LoadAll on data that we got from projects.json
+          Project.loadAll(data);
+          //storing stringifyed json data in local storage
+          localStorage.rawData = JSON.stringify(data);
+          Project.renderProjects();
+        });
+      }
+    }
   });
 };
-
-
 
 
 //Calling all functions as soon as ready
