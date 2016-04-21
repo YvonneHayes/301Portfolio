@@ -131,13 +131,7 @@
   };
 
   // creating template with Handlebars
-  projectView.initFunStats = function() {
-    var template =
-    Handlebars.compile($('#stats-template').text());
-    Project.allCats().forEach(function(stat) {
-      $('.category-stats').append(template(stat));
-    });
-
+  projectView.countProjects = function() {
     $('#project-stats .projectsnumb').text(Project.all.length);
   };
 
@@ -157,6 +151,7 @@
           Project.loadAll(JSON.parse(localStorage.rawData));
           Project.renderProjects();
           projectView.populateFilters();
+          projectView.countProjects();
 
         }else {
           localStorage.etag = latestEtag;
@@ -167,6 +162,7 @@
             localStorage.rawData = JSON.stringify(data);
             Project.renderProjects();
             projectView.populateFilters();
+            projectView.countProjects();
           });
         }
       }
@@ -176,7 +172,6 @@
 
   //Calling all functions as soon as ready
   $(document).ready(function(){
-
     projectView.handleCategoryFilter();
     projectView.handleMainNav();
     projectView.setTeasers();
