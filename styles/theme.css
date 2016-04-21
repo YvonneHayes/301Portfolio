@@ -38,6 +38,16 @@ h3 {
 }
 
 /**********************************************************/
+/*                       PROJECTS                         */
+/*********************************************************/
+
+#welcomeHome {
+  font-family: 'EB Garamond', serif;
+  background-color: green;
+  font-size: 1.5rem;
+}
+
+/**********************************************************/
 /*                       NAVBAR                          */
 /*********************************************************/
 
@@ -72,4 +82,10 @@ a:visited {
 
 #hobbies li {
   list-style: none;
+}
+
+#welcomeAbout {
+  font-family: 'EB Garamond', serif;
+  background-color: green;
+  font-size: 1.5rem;
 }
