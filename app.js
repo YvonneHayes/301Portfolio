@@ -156,6 +156,9 @@
     });
   };
 
+  //********************************************************//
+  //              ABOUT PAGE - INTERESTS                   //
+  //*******************************************************//
 
   //Calling all functions as soon as ready
   $(document).ready(function(){
