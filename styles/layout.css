@@ -15,6 +15,11 @@
   text-align: center;
 }
 
+#projectNumber {
+  text-align: center;
+  margin-top: 80px;
+}
+
 
 /**********************************************************/
 /*                       NAVBAR                          */

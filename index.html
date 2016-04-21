@@ -29,10 +29,6 @@
       </div>
     </script>
 
-    <script id="stats-template" type="text/x-handlebars-template">
-      <li><strong>{{category}}</strong>: {{category}} words written</li>
-    </script>
-
     <script id="selector-template" type="text/x-handlerbars-template">
       <option value="{{data}}">{{data}}</option>
     </script>
@@ -41,12 +37,13 @@
   <body>
     <main>
         <header id="mainHeader">
-          <!-- <section class="heading-group1"> -->
             <h1 id="mainH1">
               Yvonne Hayes | Developer
             </h1>
             <h2 id="mainH2">"Cool quote that makes me look super smart"</h2>
-          <!-- </section> -->
+            <section id="projectNumber">
+              <p>Total projects:</p><p class="projectsnumb"></p>
+            </section>
         </header>
           <nav class="main-nav">
             <a href ="#" <i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
@@ -80,14 +77,6 @@
               <li>Reading</li>
             </ul>
           </section>
-          <h1>Project Stats</h1>
-          <section id="project-stats">
-            <dt>Total projects:</dt> <dd class="projectsnumb"></dd>
-            <h2>Number of Categories</h2>
-            <p><em>How many different categories do we have...</em></p>
-            <ul class="category-stats">
-            </ul>
-          </section>
         </section>
       </div>
     </main>
@@ -101,10 +90,5 @@
     <script>
       Project.fetchAll();
     </script>
-
-    <script>
-      projectView.initFunStats();
-    </script>
-
   </body>
 </html>

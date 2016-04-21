@@ -48,6 +48,13 @@
     });
   };
 
+
+  // function to count total number of Projects
+  projectView.countProjects = function() {
+    $('#projectNumber .projectsnumb').text(Project.all.length);
+  };
+
+
 //********************************************************//
 //                    FILTERS                             //
 //*******************************************************//
@@ -112,28 +119,8 @@
 
   };
 
-//********************************************************//
-//             ABOUT .REDUCE FUN STATS                   //
-//*******************************************************//
 
 
-
-  Project.allCats = function() {
-    return Project.all.map(function(project) {
-      return (project.category);
-    })
-  .reduce(function(a, b) {
-    if (a.indexOf(b) < 0) {
-      a.push(b);
-    }
-    return a;
-  },[] );
-  };
-
-  // creating template with Handlebars
-  projectView.countProjects = function() {
-    $('#project-stats .projectsnumb').text(Project.all.length);
-  };
 
 //********************************************************//
 //                  AJAX                                  //
