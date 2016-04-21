@@ -161,7 +161,6 @@
   //*******************************************************//
 
   function useNext(next) {
-    console.log('Here\'s a few things I like doing in my free time:');
     document.getElementById('interests').innerHTML = 'Here\'s a few things I like doing in my free time:';
 
     var likes = ['coding', 'gaming', 'reading'];
@@ -169,7 +168,6 @@
   }
 
   function hobbies(s) {
-    console.log('  I enjoy ' + s );
     var node = document.createElement('li');
     var textnode = document.createTextNode(s);
     node.appendChild(textnode);
@@ -177,6 +175,33 @@
   }
 
   useNext(hobbies);
+
+  //********************************************************//
+  //              WELCOME - BY PAGE                        //
+  //*******************************************************//
+
+  var inputName = prompt('Please enter your name');
+
+  function userName(inputName, pageId) {
+    var f = function(page) {
+      console.log('Welcome to the ' + page + ', ' + inputName); // remembers name
+      var node = document.createElement('p');
+      var textnode = document.createTextNode('Welcome to the ' + page + ', ' + inputName);
+      node.appendChild(textnode);
+      document.getElementById(pageId).appendChild(node);
+    };
+    return f;
+  }
+
+  //here cometh the Closure
+
+  var pageName = userName(inputName, 'welcomeHome');
+  pageName('Portfolio Page');
+
+  var pageName2 = userName(inputName, 'welcomeAbout');
+  pageName2('About Page');
+
+
 
 
   //Calling all functions as soon as ready
