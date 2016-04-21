@@ -156,6 +156,7 @@
         if (localStorage.rawData && localStorage.etag == latestEtag){
           Project.loadAll(JSON.parse(localStorage.rawData));
           Project.renderProjects();
+          projectView.populateFilters();
 
         }else {
           localStorage.etag = latestEtag;
@@ -165,6 +166,7 @@
             //storing stringifyed json data in local storage
             localStorage.rawData = JSON.stringify(data);
             Project.renderProjects();
+            projectView.populateFilters();
           });
         }
       }
@@ -174,7 +176,7 @@
 
   //Calling all functions as soon as ready
   $(document).ready(function(){
-    projectView.populateFilters();
+
     projectView.handleCategoryFilter();
     projectView.handleMainNav();
     projectView.setTeasers();
