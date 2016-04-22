@@ -160,31 +160,31 @@
   //              ABOUT PAGE - INTERESTS                   //
   //*******************************************************//
 
-  function useNext(next) {
+  function useNext(next) { //starting by targeting the right element and giving it text
     document.getElementById('interests').innerHTML = 'Here\'s a few things I like doing in my free time:';
 
-    var likes = ['coding', 'gaming', 'reading'];
-    likes.forEach(function(el) { next(el);});
+    var likes = ['coding', 'gaming', 'reading']; //the array of hobbies
+    likes.forEach(function(el) { next(el);}); //looping through the array
   }
 
-  function hobbies(s) {
+  function hobbies(s) { //creating the proper elements and appending the info to the DOM
     var node = document.createElement('li');
     var textnode = document.createTextNode(s);
     node.appendChild(textnode);
     document.getElementById('hobbies').appendChild(node);
   }
 
-  useNext(hobbies);
+  useNext(hobbies); //calling useNext and handing it hobbies() as a param
 
   //********************************************************//
   //              WELCOME - BY PAGE                        //
   //*******************************************************//
 
-  var inputName = prompt('Please enter your name');
+  var inputName = prompt('Please enter your name'); //getting the user's Name via prompt and storing it
 
-  function userName(inputName, pageId) {
-    var makePage = function(page) {
-      var node = document.createElement('p');
+  function userName(inputName, pageId) { //params of User's Name and location where text will go
+    var makePage = function(page) {  //page - to display correct location Name later
+      var node = document.createElement('p'); //creating proper elements and appending to DOM
       var textnode = document.createTextNode('Welcome to the ' + page + ', ' + inputName);
       node.appendChild(textnode);
       document.getElementById(pageId).appendChild(node);
@@ -194,7 +194,7 @@
 
   //here cometh the Closure
 
-  var pageName = userName(inputName, 'welcomeHome');
+  var pageName = userName(inputName, 'welcomeHome'); 
   pageName('Portfolio Page');
 
   var pageName2 = userName(inputName, 'welcomeAbout');
