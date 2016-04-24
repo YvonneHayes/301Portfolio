@@ -33,6 +33,19 @@ h3 {
   font-size: 1.5rem;
 }
 
+#projectNumber {
+  font-size: 1.5rem;
+}
+
+/**********************************************************/
+/*                       PROJECTS                         */
+/*********************************************************/
+
+#welcomeHome {
+  font-family: 'EB Garamond', serif;
+  background-color: green;
+  font-size: 1.5rem;
+}
 
 /**********************************************************/
 /*                       NAVBAR                          */
@@ -67,6 +80,12 @@ a:visited {
   margin-top: 40px;
 }
 
-#interests li {
+#hobbies li {
   list-style: none;
+}
+
+#welcomeAbout {
+  font-family: 'EB Garamond', serif;
+  background-color: green;
+  font-size: 1.5rem;
 }
