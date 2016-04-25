@@ -99,15 +99,15 @@
 //*******************************************************//
 
 // Event Handler that turns Home and About into Tabs
-  projectView.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function(){
-      var dataContent = $(this).attr('data-content');
-      $('.tab-content').hide();
-      $('#' + dataContent).show();
-    });
-
-    $('.main-nav .tab:first').click();
-  };
+  // projectView.handleMainNav = function() {
+  //   $('.main-nav').on('click', '.tab', function(){
+  //     var dataContent = $(this).attr('data-content');
+  //     $('.tab-content').hide();
+  //     $('#' + dataContent).show();
+  //   });
+  //
+  //   $('.main-nav .tab:first').click();
+  // };
 
   //Set the teasers and read more link
   projectView.setTeasers = function() {
@@ -206,7 +206,7 @@
   //Calling all functions as soon as ready
   $(document).ready(function(){
     projectView.handleCategoryFilter();
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
     projectView.setTeasers();
 
   });
