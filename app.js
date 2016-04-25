@@ -180,25 +180,25 @@
   //              WELCOME - BY PAGE                        //
   //*******************************************************//
 
-  var inputName = prompt('Please enter your name'); //getting the user's Name via prompt and storing it
-
-  function userName(inputName, pageId) { //params of User's Name and location where text will go
-    var makePage = function(page) {  //page - to display correct location Name later
-      var node = document.createElement('p'); //creating proper elements and appending to DOM
-      var textnode = document.createTextNode('Welcome to the ' + page + ', ' + inputName);
-      node.appendChild(textnode);
-      document.getElementById(pageId).appendChild(node);
-    };
-    return makePage;
-  }
-
-  //here cometh the Closure
-
-  var pageName = userName(inputName, 'welcomeHome'); 
-  pageName('Portfolio Page');
-
-  var pageName2 = userName(inputName, 'welcomeAbout');
-  pageName2('About Page');
+  // var inputName = prompt('Please enter your name'); //getting the user's Name via prompt and storing it
+  //
+  // function userName(inputName, pageId) { //params of User's Name and location where text will go
+  //   var makePage = function(page) {  //page - to display correct location Name later
+  //     var node = document.createElement('p'); //creating proper elements and appending to DOM
+  //     var textnode = document.createTextNode('Welcome to the ' + page + ', ' + inputName);
+  //     node.appendChild(textnode);
+  //     document.getElementById(pageId).appendChild(node);
+  //   };
+  //   return makePage;
+  // }
+  //
+  // //here cometh the Closure
+  //
+  // var pageName = userName(inputName, 'welcomeHome');
+  // pageName('Portfolio Page');
+  //
+  // var pageName2 = userName(inputName, 'welcomeAbout');
+  // pageName2('About Page');
 
 
 

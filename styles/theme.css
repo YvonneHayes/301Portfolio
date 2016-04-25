@@ -3,7 +3,7 @@
 /*********************************************************/
 
 body {
-  background-color: #FAFAFA;
+  background-color: #F2F2F2;
 }
 
 /**********************************************************/
@@ -12,17 +12,21 @@ body {
 
 #mainHeader {
   background-image: url("../img/lavender4.png");
+  background-repeat: no-repeat;
   background-position: center;
+  background-color: #C5D8DB;
 }
 
 #mainH1 {
   font-family: 'EB Garamond', serif;
   font-size: 4rem;
+  color: black;
 }
 
 #mainH2 {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
+  color: #303347;
 }
 
 h3, p {
@@ -53,11 +57,11 @@ h3 {
 
 a, a:link, a:active {
   text-decoration: none;
-  color: #777;
+  color: #303347;
 }
 
 a:hover, a:focus {
-  color: green;
+  color: b;
 }
 
 a:visited {
