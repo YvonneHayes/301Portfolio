@@ -48,11 +48,11 @@
           <nav class="main-nav">
             <a href ="#" <i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
             <ul>
-              <li class="tab" data-content="projects"><a href="#" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-              <li class="tab" data-content="about"><a href="#" <i class="fa fa-hand-peace-o" aria-hidden="true"></i></i></i> About</a></li>
-              <li><a href="https://twitter.com/KeepingYWeird" target="_blank" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-              <li><a href="https://github.com/YvonneHayes" target="_blank"<i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
-              <li><a href="http://www.keepingyvonneweird.com" target ="_blank" <i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
+              <li class="tab" data-content="projects"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+              <li class="tab" data-content="about"><a href="about"> <i class="fa fa-hand-peace-o" aria-hidden="true"></i></i></i> About</a></li>
+              <li><a href="https://twitter.com/KeepingYWeird" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/YvonneHayes" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+              <li><a href="http://www.keepingyvonneweird.com" target ="_blank" ><i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
             </ul>
           </nav>
 
@@ -63,7 +63,7 @@
           </p>
         <section id="projects" class="tab-content flex-container">
         </section>
-      <!-- </div> -->
+
         <section id="about" class="tab-content">
           <header>
             <h2 id="aboutHeader">About me</h2>
@@ -74,17 +74,19 @@
             <ul id="hobbies"></ul>
           </section>
         </section>
-      </div>
+
     </main>
     <footer>
       &copy; 2016 Yvonne Hayes
     </footer>
 
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-      Project.fetchAll();
-    </script>
+    <script src="/vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/marked.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/projectController.js"></script>
+    <script src="/scripts/aboutController.js"></script>
+    <script src="/scripts/routes.js"></script>
   </body>
 </html>
