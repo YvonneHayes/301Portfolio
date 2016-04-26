@@ -149,3 +149,17 @@ img {
   text-align: center;
   margin-top: 20px;
 }
+
+#repoList li{
+  margin-top: 1%;
+  margin-left: 5%;
+}
+
+#repoList {
+  margin-top: 4%;
+}
+
+#repoListHL {
+  margin-left: 5%;
+  margin-top: 10%;
+}
