@@ -5,7 +5,7 @@
   var ui = function() {
     var $about = $('#about'); // Best practice: Cache the DOM query if it's used more than once.
 
-    $about.find('ul').empty();
+    // $about.find('ul').empty();
     $about.show();
     $('#filters').hide();
     $('#projects').hide();
@@ -24,7 +24,7 @@
 
     // The jQuery `append` method lets us append an entire array of HTML elements at once,
     // So we can use a little FP to transform our data-set into DOM nodes:
-    $('#about ul').append(
+    $('#repoList').append(
       repos.with('name').map(render)
     );
   };
