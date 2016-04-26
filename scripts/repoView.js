@@ -6,7 +6,9 @@
     var $about = $('#about'); // Best practice: Cache the DOM query if it's used more than once.
 
     $about.find('ul').empty();
-    $about.show().siblings().hide();
+    $about.show();
+    $('#filters').hide();
+    $('#projects').hide();
   };
 
   // TODO: Remember that new Handlebars template? Let's compile it!
