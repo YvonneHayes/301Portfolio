@@ -6,6 +6,7 @@
 
     $('main > section').hide();
     $('#projects').fadeIn();
+    $('#filters').fadeIn();
   };
 
   module.projectController = projectController;

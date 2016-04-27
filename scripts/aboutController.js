@@ -5,6 +5,7 @@
   aboutController.index = function() {
     $('main > section').hide();
     $('#about').fadeIn();
+    repos.requestRepos(repoView.index);
   };
 
   module.aboutController = aboutController;
