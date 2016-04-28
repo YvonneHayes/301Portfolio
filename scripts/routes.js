@@ -6,7 +6,7 @@
     page('/', projectController.index);
     page('about', aboutController.index);
 
-    // DONE: What function do we call to activate page.js? Fire it off now, to execute
+  
     page();
   };
 
