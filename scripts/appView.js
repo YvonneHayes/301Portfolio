@@ -45,16 +45,6 @@
 //                  VIEW OPTIONS                          //
 //*******************************************************//
 
-// Event Handler that turns Home and About into Tabs
-  // projectView.handleMainNav = function() {
-  //   $('.main-nav').on('click', '.tab', function(){
-  //     var dataContent = $(this).attr('data-content');
-  //     $('.tab-content').hide();
-  //     $('#' + dataContent).show();
-  //   });
-  //
-  //   $('.main-nav .tab:first').click();
-  // };
 
   //Set the teasers and read more link
   projectView.setTeasers = function() {
