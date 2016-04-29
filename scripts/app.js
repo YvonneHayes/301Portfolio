@@ -69,7 +69,7 @@
         if (localStorage.rawData && localStorage.etag == latestEtag){
           Project.loadAll(JSON.parse(localStorage.rawData));
           Project.renderProjects();
-          projectView.populateFilters();
+          // projectView.populateFilters();
           projectView.countProjects();
 
         }else {
@@ -108,7 +108,7 @@
 
   useNext(hobbies); //calling useNext and handing it hobbies() as a param
 
-  
+
 //making Project and projectView 'visible' outside of IIFE
   module.Project = Project;
   module.projectView = projectView;
