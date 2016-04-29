@@ -109,6 +109,27 @@
   useNext(hobbies); //calling useNext and handing it hobbies() as a param
 
 
+  var progressData = {
+    labels: ['January \'16', 'February \'16', 'March \'16', 'April \'16', 'May \'16', 'June \'16', 'July \'16', 'August \'16'],
+    datasets: [
+      {
+        fillColor: 'rgba(160, 193, 222, .4)',
+        strokeColor: '#337ab7',
+        pointColor: '#fff',
+        pointStrokeColor: '#9db86d',
+        data: [0, 4, 20, 33, 45, 55, 75, 80]
+      }
+    ]
+  };
+
+  var toyOptions = {
+    responsive: true
+  };
+
+  var progress = document.getElementById('progressChart').getContext('2d');
+  new Chart(progress).Line(progressData);
+
+
 //making Project and projectView 'visible' outside of IIFE
   module.Project = Project;
   module.projectView = projectView;
