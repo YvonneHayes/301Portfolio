@@ -1,3 +1,7 @@
+(function(module) {
+
+  var projectView = {};
+
 //********************************************************//
 //                    FILTERS                             //
 //*******************************************************//
@@ -69,3 +73,7 @@
     projectView.setTeasers();
 
   });
+
+  module.projectView = projectView;
+
+})(window);

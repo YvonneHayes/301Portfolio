@@ -1,6 +1,6 @@
 (function(module) {
 
-  var projectView = {};
+
 
 //Project creator function
   function Project (projectIndex) {
@@ -151,6 +151,6 @@
 
 //making Project and projectView 'visible' outside of IIFE
   module.Project = Project;
-  module.projectView = projectView;
+
 
 })(window);
