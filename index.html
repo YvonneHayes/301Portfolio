@@ -33,19 +33,6 @@
       <option value="{{data}}">{{data}}</option>
     </script>
 
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-        <p>Description: {{description}}</p>
-        <p>Language: {{language}}</p>
-        <p>Created: {{created_at}}</p>
-        <p>Last updated: {{updated_at}}</p>
-        {{#if watchers_count}}
-          <p>{{watchers_count}} watching this repo</p>
-        {{/if}}
-      </li>
-    </script>
-
   </head>
   <body>
     <main>
@@ -83,8 +70,10 @@
             <div id="interests"></div>
             <ul id="hobbies"></ul>
           </section>
-          <h2 id="repoListHL">Check out my repos on GitHub!</h2>
-          <ul id="repoList"></ul>
+          <section id="Chart">
+            <h2>Look at the amazing progress I've made!</h2>
+            <canvas id="progressChart" width="600" height="400"></canvas>
+          </section>
         </section>
 
     </main>
@@ -97,10 +86,10 @@
     <script src="/vendor/scripts/marked.js"></script>
     <script src="/vendor/scripts/page.js"></script>
     <script src="/scripts/githubToken.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/appView.js"></script>
     <script src="/scripts/projectController.js"></script>
-    <script src="/scripts/repo.js"></script>
-    <script src="/scripts/repoView.js"></script>
     <script src="/scripts/aboutController.js"></script>
     <script src="/scripts/routes.js"></script>
   </body>
